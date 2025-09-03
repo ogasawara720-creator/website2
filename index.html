@@ -1,16 +1,118 @@
-<!DOCTYPE html>
+
+<style>
+
+ /* Desktop */
+body {
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+	color: #252525;
+}
+
+h1 {
+	font-size: 52px;
+}
+
+h1 span {
+	display: block;
+}
+
+.hero-container{
+	margin: 50px 80px;
+}
+
+.hero-container img.logo {
+	width: 250px;
+	height: auto;
+}
+
+.hero-container .announcement{
+	padding-top: 200px;
+	font-size: 32px;
+}
+
+.hero-container .announcement .colored-text{
+	color: #E70012;
+}
+
+.hero-container .redirect-text a{
+	color: #252525;
+	text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1440px) {
+	h1{
+		font-size: 44px;
+	}	
+	.hero-container img.logo {
+		width: 200px;
+		height: auto;
+	}
+}
+ 
+@media (max-width: 767px) {
+	h1 span{
+		display: inline;
+	}
+}
+ 
+@media (max-height: 700px) {	
+	.hero-container img.logo {
+		height: auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-container{
+		margin: 25px;
+	}
+	.hero-container img.logo {
+		width: 160px;
+		height: auto;
+	}
+	.hero-container .announcement {
+		padding-top: 150px;
+	}
+	h1 {
+		font-size: 32px;
+	} 
+}
+ 
+
+</style>
+
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Maintenance</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #333; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marubeni</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Currently Under Maintenance</h1>
-    <p>We apologize for the inconvenience. Please check back again later.</p>
+<section class="hero-container">
+	<img class="logo" src="image/marubeni-consumer-platform.png" alt="Marubeni Logo" />
+	
+	<div class="announcement">
+		<h1>
+			<span>Our website has moved to</span>
+			<span class="colored-text">Marubeni Consumer Platform</span>
+		</h1>
+	</div>
+	
+	<div class="redirect-text">
+		<p>Please click <a href="https://marubeni-cp.com/en/">here</a> to be redirected.</p>
+	</div>
+ </section>
+ 
+ 
+<script>
+setTimeout(function() {
+    window.location.href = "https://marubeni-cp.com/en";
+}, 3000); // 3000 毫秒 = 3 秒
+</script>
+ 
+ 
 </body>
 </html>
